@@ -1,0 +1,14 @@
+/*	=ELEMENT SETUP
+----------------------------------------------------------------------*/
+
+img,
+object,
+embed,
+iframe {
+	max-width: 100%;
+	height: auto;
+	
+	&.noscale {
+		max-width: none;
+	}
+}

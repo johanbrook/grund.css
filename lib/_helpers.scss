@@ -1,0 +1,13 @@
+/*	=HELPERS
+----------------------------------------------------------------------*/
+
+.group {
+	@include clearfix;
+}
+
+.clear {
+	clear: both; 
+	display: block; 
+	height: 1px; 
+	margin: -1px 0 0 0;
+}

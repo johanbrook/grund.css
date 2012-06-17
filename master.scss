@@ -1,0 +1,14 @@
+// Setup
+
+@import "compass/css3";
+@import "settings";
+
+// Lib files
+
+@import "lib/reset";
+@import "lib/mixins";
+@import "lib/helpers";
+
+// Main site styles
+
+@import "main";
