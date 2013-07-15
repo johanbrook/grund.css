@@ -14,20 +14,18 @@ body {
 // ELEMENTS
 // Include stuff like headings, links, buttons, forms, element styling ..
 
-@import "common/headings";
-@import "common/elements";
+@import "common/*";
 
 
 // PARTIALS
 // Different areas of the site layout, ex. header, sidebars.
 
-@import "partials/header";
-@import "partials/footer";
+@import "partials/*";
 
 // VIEWS
 // Different views, ex. home, profile page, etc.
 
-@import "views/home";
+@import "views/*";
 
 // RESPONSIVE STYLES
 
