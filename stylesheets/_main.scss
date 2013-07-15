@@ -8,7 +8,7 @@ html {
 body {
 	-webkit-tap-highlight-color: #fff;
 	font: normal #{$fontsize}/#{($leading/$base-size)} $sans;
-	color: $bodycolor;
+	color: $text-color;
 }
 
 // ELEMENTS

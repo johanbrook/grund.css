@@ -2,16 +2,19 @@
 
 $accent:				#003366;
 $gray:					#666666;
-$bodycolor: 			#323232;
+$text-color: 			#323232;
 
 $btn-color:				blue;
 $btn-color-dangerous:	red;
 $btn-color-accent:		green;
 
+$link-color: 			$accent;
+
 
 // Typography
 
 $sans:					"Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: 				Georgia, serif;
 
 $base-size:				15;
 $leading:				21;
@@ -21,6 +24,9 @@ $lineheight:			($leading/$base-size) * 1em;
 
 // Grid
 
-$page_width:			768px;
-$grid-gutter:			28px;
-$grid-column:			98px;
+$page-width:			768px;
+
+// Viewports
+
+$medium-screen: 		940px;
+$small-screen: 			560px;

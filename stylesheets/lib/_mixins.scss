@@ -17,9 +17,54 @@
 	}
 }
 
+// Respond mixin for including contents
+// for other viewports.
+// 
+// Usage:
+// 	@include respond($small-screen) {
+// 		/* code */
+// 	}
+// 	
+// 	May be nested.
+@mixin respond($width, $mode: "max") {
+	@media only screen and (#{$mode}-width: $width) {
+		@content;
+	}
+}
+
+// Cross-browser keyframes mixin.
+
+@mixin keyframes($name) {
+	@-webkit-keyframes $name {
+		@content;
+	}
+
+	@-moz-keyframes $name {
+		@content;
+	}
+
+	@keyframes $name {
+		@content;
+	}
+}
+
+// Cross-browser CSS animation mixin.
+
+@mixin animation($animation, $duration: 1s, $count: 1, $delay: 0s, $easing: "ease-out") {
+	-webkit-animation: unquote($animation) $duration $delay $count unquote($easing) forwards;
+	-moz-animation: unquote($animation) $duration $delay $count unquote($easing) forwards;
+	animation: unquote($animation) $duration $delay $count unquote($easing) forwards;
+}
+
 
 // Functions
 
-@function to_em($desired) {
-	@return ($desired / $base-size) * 1em;
+// Convert a unit to ems.
+@function to_em($desired, $context: $base-size) {
+	@return ($desired / $context) * 1em;
+}
+
+// Convert a unit to percentage.
+@function to_percent($input, $target) {
+	@return ($input / $target)*100%;
 }
