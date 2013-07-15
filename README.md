@@ -35,13 +35,17 @@ For development, forking, etc.
 
 ## How I use the file structure
 
-The `[sass-globbing](https://github.com/chriseppstein/sass-globbing)` gem lets you include whole trees of Scss files. Se `_main.scss`. Thus, all files in the directories `common`, `partials`, and `views` will be auto imported in `_main.scss`.
+The [sass-globbing](https://github.com/chriseppstein/sass-globbing) gem lets you include whole trees of Scss files. Se `_main.scss`. Thus, all files in the directories `common`, `partials`, and `views` will be auto imported in `_main.scss`.
 
-- I usually put common stuff in .. yeah, `common`. It may be general, site wide things like styles for buttons, forms, headings, modal boxes, etc. 
-- In `lib`, styles which potentially can be re-used in different projects should live. General helpers, mixins, font definitions, animations, etc.
-- In `partials` I put styles for different regions of the site, such as header, footer, articles, etc.
+Install `sass-globbing` with
+
+	gem install sass-globbing
+
+- `common`. I usually put common stuff in .. yeah, `common`. It may be general, site wide things like styles for buttons, forms, headings, modal boxes, etc. 
+- `lib`. In here, styles which potentially can be re-used in different projects should live. General helpers, mixins, font definitions, animations, etc.
+- `partials`. Here I put styles for different regions of the site, such as header, footer, articles, etc.
 - `views` contains a Scss file for each major view of the site. Could be structured in nested directories, thanks to `sass-globbing`.
-- `viewports` can contain files with media queries. Must be explicitly imported in `_main.scss`.
+- `viewports` contains files with media queries. Must be explicitly imported in `_main.scss`.
 
 ## Contribute
 
