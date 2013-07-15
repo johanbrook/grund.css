@@ -2,7 +2,7 @@
 
 "Grund" is "foundation" in Swedish. This is my own SCSS foundation I start out new projects from. It's built with [Compass](http://compass-style.org) in mind, but that dependency can be easily pulled out.
 
-# Why create Grund?
+## Why create Grund?
 
 Since I'm tired of setting up the same file structure for every new project. I find myself copying over the same files and snippets all over again. Having these resources in a repository is great for collaboration, learning and developing good practices.
 
@@ -10,11 +10,11 @@ Building modular reusable CSS is hard. Thanks to [SCSS](http://sass-lang.org) we
 
 I've written a post on the subject some time ago which you should read: ["Bringing order to CSS"](http://johanbrook.com/design/css/bringing-order-to-css/). 
 
-# Installation
+## Installation
 
 There are a couple of ways:
 
-## 1. Use the gem
+### 1. Use the gem
 
 I've created a [RubyGem](http://rubygems.org) for easy installations of Grund. You didn't think I'd create a reusable CSS foundation without a quick way of putting it into a new project, did you?
 
@@ -23,21 +23,31 @@ I've created a [RubyGem](http://rubygems.org) for easy installations of Grund. Y
 
 It'll pull down the files in this repo and put it in the current directory. Run `grund help` for brief info. The repository for the CLI client is located here: [github.com/johanbrook/grund](https://github.com/johanbrook/grund).
 
-## 2. Download the ZIP package
+### 2. Download the ZIP package
 
 Download the **[ZIP file](https://github.com/johanbrook/grund.css/zipball/master)** with the files.
 
-## 3. Clone the git repo
+### 3. Clone the git repo
 
 	git clone git://github.com/johanbrook/grund.css.git
 
 For development, forking, etc.
 
-# Contribute
+## How I use the file structure
+
+The `[sass-globbing](https://github.com/chriseppstein/sass-globbing)` gem lets you include whole trees of Scss files. Se `_main.scss`. Thus, all files in the directories `common`, `partials`, and `views` will be auto imported in `_main.scss`.
+
+- I usually put common stuff in .. yeah, `common`. It may be general, site wide things like styles for buttons, forms, headings, modal boxes, etc. 
+- In `lib`, styles which potentially can be re-used in different projects should live. General helpers, mixins, font definitions, animations, etc.
+- In `partials` I put styles for different regions of the site, such as header, footer, articles, etc.
+- `views` contains a Scss file for each major view of the site. Could be structured in nested directories, thanks to `sass-globbing`.
+- `viewports` can contain files with media queries. Must be explicitly imported in `_main.scss`.
+
+## Contribute
 
 Contributions, tips and suggestions are welcomed! CSS is a living thing – new best practices develops, and while I'd like to keep the bloat down, it would be great to learn how others are doing it.
 
-# License (MIT)
+## License (MIT)
 
 Copyright © 2012 Johan Brook, http://johanbrook.com
 
